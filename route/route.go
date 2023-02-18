@@ -27,7 +27,7 @@ func InitRoute(engine *html.Engine) *fiber.App {
 
 	api := app.Group("/api")
 	auth := api.Group("/auth")
-	auth.Post("/login", controller.Login) //localhost:3000/api/auth/login
-
+	auth.Post("/login", controller.Login)       //localhost:3000/api/auth/login
+	auth.Post("/register", controller.Register) //localhost:3000/api/auth/Register
 	return app
 }
